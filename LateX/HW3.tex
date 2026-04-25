@@ -1,0 +1,83 @@
+\documentclass[letterpaper, 11pt]{extarticle}
+
+\input{preamble}
+\input{format}
+\input{commands}
+
+% Listings style for code
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{red},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=8pt,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!5},
+}
+
+\begin{document}
+
+\begin{Large}
+    \textsf{\textbf{CS361 - HW3}}
+\end{Large}
+
+\vspace{1ex}
+
+\textsf{\textbf{Student:}} \text{Shrey Poshiya}\\
+
+Github Link: \href{https://github.com/sposhiy33/CS361HW}{https://github.com/sposhiy33/CS361HW}
+
+\vspace{2ex}
+
+
+% Problem 1 - Min-heap: at least k numbers smaller than x
+\begin{problem}{}{problem-1}
+    You are given a min-heap $H$ containing $n$ numbers, an integer $k$, and a number $x$. Design an algorithm that determines whether $H$ contains at least $k$ numbers smaller than $x$, and runs in $O(k)$ time. Your answer must not depend on $n$.
+\end{problem}
+
+\vspace{1ex}
+\noindent\textbf{Implementation:}
+\lstinputlisting[language=Python,caption={Problem 1 (\texttt{Problem1/problem1.py})}]{../HW3/Problem1/problem1.py}
+
+\textbf{Note}: the implementaton of the Min-Heap can be found in the github under the following directory: \texttt{HW3/Problem1}
+
+
+% Problem 2 - Determine if undirected graph is a tree
+\begin{problem}{}{problem-2}
+    Suppose you are given an undirected simple graph $G(V, E)$. Design an efficient algorithm to determine if the given graph is a tree or not. Note that you should also discuss how you want the input graph to be represented, e.g., an adjacency list or an adjacency matrix.
+\end{problem}
+
+\vspace{1ex}
+\noindent\textbf{Implementation:}
+\lstinputlisting[language=Python,caption={Problem 2 (\texttt{Problem2/problem2.py})}]{../HW3/Problem2/problem2.py}
+
+
+% Problem 3 - Rotting Oranges (LeetCode)
+\begin{problem}{}{problem-3}
+    Solve the Rotting Oranges problem and write the algorithm for your answer. Your solution must pass all test cases, and you must attach a screenshot of your accepted submission.
+
+    \vspace{1ex}
+    \noindent Problem link: \url{https://leetcode.com/problems/rotting-oranges/description/}
+\end{problem}
+
+\vspace{1ex}
+\noindent\textbf{Implementation:}
+\lstinputlisting[language=Python,caption={Problem 3 (\texttt{Problem3/problem3.py})}]{../HW3/Problem3/problem3.py}
+
+
+% Problem 4 - BFS and DFS Implementation and analysis
+\begin{problem}{}{problem-4}
+    BFS and DFS Implementation and analysis.
+\end{problem}
+
+\vspace{1ex}
+\noindent\textbf{Implementation:}
+\lstinputlisting[language=Python,caption={Problem 4 (\texttt{Problem4/problem4.py})}]{../HW3/Problem4/problem4.py}
+
+
+\end{document}

@@ -24,7 +24,6 @@ def mergeSort(arr):
 
     return merged, total_count
 
-
 def merge(A,B,count):
 
     # if i were not using python list, C would be iitialized to be length of len(A) + len(B)
