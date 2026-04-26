@@ -33,7 +33,7 @@ class GraphMatrix:
         verticies is a list of vertex labels (any hashable, e.g. ints or letters)
         """
         self.v = verticies
-        # map label -> row/col index so we can support non-integer labels
+        # map label -> row/col index for alphabet labels
         self.idx = {label: i for i, label in enumerate(verticies)}
         n = len(verticies)
         self.adj = [[0 for _ in range(n)] for _ in range(n)]

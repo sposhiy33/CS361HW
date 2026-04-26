@@ -4,16 +4,7 @@ Adjacency List:
 	   traversed node 0 -> 3
 	   traversed node 0 -> 2
 	   traversed node 0 -> 7
-	   traversed node 0 -> 8
-	 pop 3 from queue
-	   traversed node 3 -> 1
-	   traversed node 3 -> 5
-	   traversed node 3 -> 0
-	 pop 2 from queue
-	   traversed node 2 -> 1
-	   traversed node 2 -> 0
-	 pop 7 from queue
-	 BFS List visited length: 7
+	 BFS List visited length: 4
 
 	 pop 0 from stack
 	   traversed node 0 -> 3
@@ -26,23 +17,14 @@ Adjacency List:
 	 pop 10 from stack
 	   traversed node 10 -> 8
 	 pop 7 from stack
-	 DFS List visited length: 6
+	 DFS List visited length: 4
 
 Adjacency Matrix:
 	 pop 0 from queue
 	   traversed node 0 -> 2
 	   traversed node 0 -> 3
 	   traversed node 0 -> 7
-	   traversed node 0 -> 8
-	 pop 2 from queue
-	   traversed node 2 -> 0
-	   traversed node 2 -> 1
-	 pop 3 from queue
-	   traversed node 3 -> 0
-	   traversed node 3 -> 1
-	   traversed node 3 -> 5
-	 pop 7 from queue
-	 BFS Matrix visited length: 7
+	 BFS Matrix visited length: 4
 
 	 pop 0 from stack
 	   traversed node 0 -> 2
@@ -55,7 +37,7 @@ Adjacency Matrix:
 	 pop 10 from stack
 	   traversed node 10 -> 8
 	 pop 7 from stack
-	 DFS Matrix visited length: 6
+	 DFS Matrix visited length: 4
 
 
 === Graph b (directed), source A -> target O ===
@@ -83,17 +65,7 @@ Adjacency List:
 	 pop L from queue
 	 pop N from queue
 	   traversed node N -> O
-	 pop K from queue
-	   traversed node K -> L
-	   traversed node K -> F
-	 pop F from queue
-	   traversed node F -> G
-	   traversed node F -> H
-	   traversed node F -> M
-	 pop I from queue
-	   traversed node I -> J
-	 pop O from queue
-	 BFS List visited length: 15
+	 BFS List visited length: 13
 
 	 pop A from stack
 	   traversed node A -> B
@@ -108,7 +80,6 @@ Adjacency List:
 	 pop K from stack
 	   traversed node K -> L
 	   traversed node K -> F
-	 pop L from stack
 	 pop F from stack
 	   traversed node F -> G
 	   traversed node F -> H
@@ -116,7 +87,7 @@ Adjacency List:
 	 pop M from stack
 	   traversed node M -> O
 	 pop O from stack
-	 DFS List visited length: 12
+	 DFS List visited length: 8
 
 Adjacency Matrix:
 	 pop A from queue
@@ -145,14 +116,7 @@ Adjacency Matrix:
 	 pop L from queue
 	 pop N from queue
 	   traversed node N -> O
-	 pop F from queue
-	   traversed node F -> G
-	   traversed node F -> H
-	   traversed node F -> M
-	 pop I from queue
-	   traversed node I -> J
-	 pop O from queue
-	 BFS Matrix visited length: 15
+	 BFS Matrix visited length: 13
 
 	 pop A from stack
 	   traversed node A -> B
@@ -175,19 +139,19 @@ Adjacency Matrix:
 	 pop M from stack
 	   traversed node M -> O
 	 pop O from stack
-	 DFS Matrix visited length: 12
+	 DFS Matrix visited length: 9
 
 
 === avg time + memory over 5 runs ===
 Graph-(a):
-	 BFS list  : avg time =     3.93 us, avg peak memory =     208 bytes
-	 BFS matrix: avg time =     3.61 us, avg peak memory =     144 bytes
-	 DFS list  : avg time =     2.22 us, avg peak memory =     144 bytes
-	 DFS matrix: avg time =     3.37 us, avg peak memory =     144 bytes
+	 BFS list  : avg time =     2.38 us, avg peak memory =     176 bytes
+	 BFS matrix: avg time =     1.95 us, avg peak memory =     144 bytes
+	 DFS list  : avg time =     2.25 us, avg peak memory =     112 bytes
+	 DFS matrix: avg time =     3.24 us, avg peak memory =     112 bytes
 Graph-(b):
-	 BFS list  : avg time =     7.43 us, avg peak memory =     240 bytes
-	 BFS matrix: avg time =    13.65 us, avg peak memory =     240 bytes
-	 DFS list  : avg time =     4.97 us, avg peak memory =     208 bytes
-	 DFS matrix: avg time =     8.67 us, avg peak memory =     208 bytes
+	 BFS list  : avg time =     5.86 us, avg peak memory =     240 bytes
+	 BFS matrix: avg time =    10.84 us, avg peak memory =     240 bytes
+	 DFS list  : avg time =     4.67 us, avg peak memory =     176 bytes
+	 DFS matrix: avg time =     8.88 us, avg peak memory =     192 bytes
 
 results written to results/analysis_results.csv

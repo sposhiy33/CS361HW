@@ -104,10 +104,45 @@ Submission Link: \href{https://leetcode.com/problems/rotting-oranges/submissions
 \lstinputlisting[language={},caption={Problem 4 output (\texttt{Problem4/problem4.out})}]{../HW3/Problem4/problem4.out}
 
 \vspace{1ex}
+\noindent\textbf{Traversal comparison (visited order until target is found):}
+\begin{center}
+\begin{tabular}{|c|l|l|c|}
+\hline
+\textbf{Graph} & \textbf{Variant} & \textbf{Visited order} & \textbf{Length} \\
+\hline
+(a) & BFS list   & 0, 3, 2, 7 & 4 \\
+(a) & BFS matrix & 0, 2, 3, 7 & 4 \\
+(a) & DFS list   & 0, 8, 10, 7 & 4 \\
+(a) & DFS matrix & 0, 8, 10, 7 & 4 \\
+\hline
+(b) & BFS list   & A, B, C, D, G, E, H, L, N, K, F, I, O & 13 \\
+(b) & BFS matrix & A, B, C, D, G, E, H, K, L, N, F, I, O & 13 \\
+(b) & DFS list   & A, C, D, E, K, F, M, O               & 8 \\
+(b) & DFS matrix & A, C, D, E, K, L, F, M, O            & 9 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1ex}
 \noindent\textbf{Heatmap (BFS vs DFS, list vs matrix; avg of 5 runs):}
 \begin{center}
     \includegraphics[width=\linewidth]{assets_HW3/problem4_heatmap.png}
 \end{center}
 
+\vspace{1ex}
+\noindent\textbf{Notes:}
+
+See \texttt{HW3/Problem4} for graph representation code, analysis code (time and memory analysis), and plotting code for the above heatmap. Only the main traversal algorithms are provided in the listing above.
+
+\textit{Graph A}: We see DFS ends up requiring more execution time than BFS. While the traversal counts (not the paths) are all the same, it is likely that DFS algorithm uses more operations throughout its runtime. Overall there is not as much variance between execution times due to the small size of the graph. Surprisngly, each algorithm and graph representation variant ends up have the same traversal count (this is explained later). 
+
+The max memory usage shows that BFS list representation has the largest memaory footprint out of the 4 variants. Since the traversal counts are the same, the visited arrays are all of the same size. This means that the discrepency in memory footprint must come from the queue/stack of the traversal algorithms.
+
+Note: The peak memory metric provides insight into the peak size of the function call, which mainly correlates to peak size of the queue or stack in BFS and DFS respectively and the visited array (my implementation does not account for the memory footprint of the graph objects). 
+
+\textit{Graph B}: Here we see a clear execution time increase when using a matrix representation as opposed to a list representation. This means that the time it takes to retrive all neighbors from the matrix for a given node becomes a bottleneck in the traversal algorithm. In the list representation, the specific neighbor identities for each node are inherently part of the data structure, requiring less operations than the matrix. A larger graph, shows this discrepancy more clearly as compared to the smaller graph A. The peak memory sizes correlate to the size of the visited node list (see above). This means that the queue/stack of the traversal does not have as much impact, meaning that it pretty small compared to the visited list. This goes to show that the size of queue/stack data structure in the traversal algorithm does not necessarily scale with graph size. Overall BFS has a larger memory footprint, most likely a result of the BFS traversals being longer.
+
+
+\textit{Traversal Paths}: It is obvious to see differences in traversal paths between DFS and BFS, but it is less obvious when comparing list vs matrix representations. The core fact underlying the difference in traversals between these two data structures is: $(1)$ the matrix traverses over neighbors in the order of row/col order (ascending for my BFS implementation and descending for my DFS implementation) while $(2)$ the list representation traverses over neighbors in the order that they were inserted (see analysis.py for this). Surprinsgly, despite the difference in traversal paths, we that the graph A traversals end up being the same length of $4$.
 
 \end{document}
