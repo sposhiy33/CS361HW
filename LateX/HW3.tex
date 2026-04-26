@@ -56,18 +56,38 @@ Github Link: \href{https://github.com/sposhiy33/CS361HW}{https://github.com/spos
 \noindent\textbf{Implementation:}
 \lstinputlisting[language=Python,caption={Problem 2 (\texttt{Problem2/problem2.py})}]{../HW3/Problem2/problem2.py}
 
+\vspace{1ex}
+\noindent\textbf{Output:}
+\lstinputlisting[language={},caption={Problem 2 output (\texttt{Problem2/problem2.out})}]{../HW3/Problem2/problem2.out}
+
+\vspace{1ex}
+\noindent\textbf{Notes:}
+
+To see the specific implementation of the graph, see the following file: \texttt{HW3/Problem2/graph.py}. I opted to use a \text{list representation} for the graph as we are not explicity working with dense graphs, in which case the memory usage of the list and matrix representations would be equiavalent with the matrix having the added benfit of $O(1)$ look up time for edges. But since I am only performing a traversal, I do not need to lookup specific edges; therefore, I cannot utulize the fast lookup time. 
+
+Furthermore, my algorithm involves comparing a nodes entire adjecency set with the visited list. Since the list representation inherently stores the adjacency set, a list representation is the obvious choice (with a matrix representation, I would have to construct this set using extra operations)
 
 % Problem 3 - Rotting Oranges (LeetCode)
 \begin{problem}{}{problem-3}
     Solve the Rotting Oranges problem and write the algorithm for your answer. Your solution must pass all test cases, and you must attach a screenshot of your accepted submission.
-
-    \vspace{1ex}
-    \noindent Problem link: \url{https://leetcode.com/problems/rotting-oranges/description/}
 \end{problem}
 
 \vspace{1ex}
 \noindent\textbf{Implementation:}
 \lstinputlisting[language=Python,caption={Problem 3 (\texttt{Problem3/problem3.py})}]{../HW3/Problem3/problem3.py}
+
+\vspace{1ex}
+\noindent\textbf{Output:}
+\lstinputlisting[language={},caption={Problem 3 output (\texttt{Problem3/problem3.out})}]{../HW3/Problem3/problem3.out}
+
+\vspace{1ex}
+\noindent\textbf{LeetCode Submission:}
+
+Submission Link: \href{https://leetcode.com/problems/rotting-oranges/submissions/1988162220}{https://leetcode.com/problems/rotting-oranges/submissions/1988162220}
+
+\begin{center}
+    \includegraphics[width=\linewidth]{assets_HW3/RottingOrangesSubmission.png}
+\end{center}
 
 
 % Problem 4 - BFS and DFS Implementation and analysis
@@ -78,6 +98,16 @@ Github Link: \href{https://github.com/sposhiy33/CS361HW}{https://github.com/spos
 \vspace{1ex}
 \noindent\textbf{Implementation:}
 \lstinputlisting[language=Python,caption={Problem 4 (\texttt{Problem4/problem4.py})}]{../HW3/Problem4/problem4.py}
+
+\vspace{1ex}
+\noindent\textbf{Output:}
+\lstinputlisting[language={},caption={Problem 4 output (\texttt{Problem4/problem4.out})}]{../HW3/Problem4/problem4.out}
+
+\vspace{1ex}
+\noindent\textbf{Heatmap (BFS vs DFS, list vs matrix; avg of 5 runs):}
+\begin{center}
+    \includegraphics[width=\linewidth]{assets_HW3/problem4_heatmap.png}
+\end{center}
 
 
 \end{document}

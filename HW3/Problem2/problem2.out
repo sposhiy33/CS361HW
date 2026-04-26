@@ -1,0 +1,4 @@
+Test Case 1: Tree
+	 Result: True
+Test Case 1: Tree with a Cycle ... so not tree
+	 Result: False

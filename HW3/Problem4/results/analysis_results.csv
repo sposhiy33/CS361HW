@@ -1,0 +1,9 @@
+graph,algorithm,implementation,avg_time_us,avg_peak_memory_bytes
+a,BFS,list,3.9252,208
+a,BFS,matrix,3.6084,144
+a,DFS,list,2.2250,144
+a,DFS,matrix,3.3668,144
+b,BFS,list,7.4332,240
+b,BFS,matrix,13.6498,240
+b,DFS,list,4.9670,208
+b,DFS,matrix,8.6748,208
